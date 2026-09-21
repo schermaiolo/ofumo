@@ -1,0 +1,99 @@
+.TH OFUMO 1 "September 2026" "ofumo 0.0.1" "User Commands"
+.SH NAME
+ofumo \- Koishi Fumo desktop pet with oneko-compatible controls
+.SH SYNOPSIS
+.B ofumo
+.RI [ options ]
+.SH DESCRIPTION
+OFumo displays a shaped Koishi Fumo which follows the pointer using movement
+and idle-state semantics derived from classic oneko.
+.PP
+On X11, pointer and window information is obtained directly through Xlib. On
+KDE Plasma Wayland, OFumo draws through XWayland but obtains the global cursor
+and active-window geometry from KWin using a temporary helper bridge.
+.SH OPTIONS
+.TP
+.BR -help ", " -h ", " --help
+Show usage information.
+.TP
+.BI -display " DISPLAY"
+Use the specified X display.
+.TP
+.BI -fg " COLOR"
+Set foreground color.
+.TP
+.BI -bg " COLOR"
+Set background color.
+.TP
+.BI -speed " N"
+Pixels moved per timer tick. Default: 13.
+.TP
+.BI -time " US"
+Update interval in microseconds. Default: 125000.
+.TP
+.BI -idle " N"
+Pointer movement threshold needed to wake the pet. Default: 6.
+.TP
+.BI -name " NAME"
+Set the OFumo X11 window name.
+.TP
+.B -towindow
+Select an X11/XWayland window and chase it.
+.TP
+.BI -toname " NAME"
+Chase an X11/XWayland window by its X11 title.
+.TP
+.B -tofocus
+Run to/on top of the focused window. On KDE Wayland, KWin supplies native
+Wayland active-window geometry.
+.TP
+.BI -position " GEOMETRY"
+Offset the target position relative to the pointer or target window.
+.TP
+.B -rv
+Swap foreground and background colors.
+.TP
+.B -noshape
+Do not use the X SHAPE extension. The OFumo window is rectangular.
+.TP
+.B -debug
+Use synchronous X11 requests for debugging.
+.TP
+.B -patchlevel
+Print the OFumo version and exit.
+.TP
+.BI -cursor " N"
+Set X cursor-font glyph N on the X root window while cleaning up. This is an
+X11/XWayland facility and does not control the native Wayland cursor.
+.TP
+.BR -neko ", " -tora ", " -dog ", " -bsd_daemon ", " -sakura ", " -tomoyo
+Accepted for command-line compatibility with oneko. Koishi is currently the
+only OFumo character, so these flags do not yet change the sprite.
+.TP
+.BI --backend " MODE"
+OFumo extension. Select pointer backend: auto, x11, or kwin. Default: auto.
+.TP
+.BR -v ", " --verbose
+OFumo extension. Print backend and state diagnostics.
+.TP
+.B --version
+OFumo extension. Print the version and exit.
+.SH WAYLAND NOTES
+OFumo selects the backend at startup. X11 sessions use the direct Xlib path.
+KDE Plasma Wayland sessions use KWin for global cursor and active-window state
+while the shaped pet window is still rendered through XWayland.
+.PP
+Other Wayland compositors are not supported in version 0.0.1.
+.PP
+On KDE Plasma Wayland, -towindow and -toname still use X11 selection/title
+lookup and can therefore target X11/XWayland windows only.
+
+.SH ANIMATIONS
+Koishi uses directional, sleep, wink, disappearance, spawn, click and spin
+frames. Ambient winks are intentionally infrequent. The spin special cycles
+left, back, right and front twice and may occur as a random idle fidget.
+
+.SH AUTHOR
+Daniel Fridman (Schermaiolo).
+.SH SEE ALSO
+oneko(6)
