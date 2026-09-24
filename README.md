@@ -6,6 +6,10 @@ OFumo keeps the oneko-style movement and idle state machine, replaces the cat
 with Koishi animations, and adds a KDE Plasma Wayland backend while retaining
 native X11 support.
 
+<p align="center">
+  <img src="media/ofumo-demo-v0.0.1.gif" alt="OFumo demo">
+</p>
+
 ## Features
 
 - Koishi follows the pointer with oneko-style movement
