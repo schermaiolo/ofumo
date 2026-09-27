@@ -1,0 +1,71 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: OFumo
+Upstream-Contact: Daniel Fridman <daniel.fridman-dev@proton.me>
+Source: https://github.com/schermaiolo/ofumo
+Comment:
+ OFumo is an unofficial Touhou Project fan work. The Koishi sprite files have
+ separate terms and are not covered by the Expat license used for the OFumo
+ source code.
+
+Files:
+ CMakeLists.txt
+ README.md
+ NOTICE.md
+ docs/*
+ src/*
+ tools/*
+Copyright: 2026 Daniel Fridman
+License: Expat
+Comment:
+ Portions of the movement and idle-state logic are adapted from the classic
+ public-domain oneko program. The OFumo modifications and original code are
+ licensed under Expat; the oneko-derived public-domain material remains public
+ domain.
+
+Files: assets/koishi/*
+Copyright:
+ Tim_M (original/reference FumoFumos pixel art)
+ 2026 Daniel Fridman (OFumo adaptations)
+License: FumoFumos-Personal-NonCommercial
+Comment:
+ These files are derivative fan artwork. Permission from the FumoFumos artist
+ is limited to personal and non-commercial use and only covers rights held by
+ that artist; it does not grant rights in third-party characters or designs.
+ The authoritative artist terms are published at:
+ https://fumofumos.com/about.html
+ OFumo is an unofficial Touhou Project fan work.
+
+Files: debian/*
+Copyright: 2026 Daniel Fridman
+License: Expat
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+License: FumoFumos-Personal-NonCommercial
+ This is a local descriptive short name, not a standard Debian license
+ identifier.
+ .
+ The artwork may be used only for personal and non-commercial purposes.
+ Credit is not required, although attribution is appreciated.
+ Permission applies only to rights held by the FumoFumos artist and does not
+ grant rights to third-party characters or designs.
+ .
+ The authoritative terms are published at:
+ https://fumofumos.com/about.html

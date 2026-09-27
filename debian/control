@@ -1,0 +1,28 @@
+Source: ofumo
+Section: x11
+Priority: optional
+Maintainer: Daniel Fridman <daniel.fridman-dev@proton.me>
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake,
+ pkgconf,
+ libx11-dev,
+ libxext-dev,
+ libsystemd-dev,
+ python3,
+ python3-pil
+Standards-Version: 4.7.4
+Rules-Requires-Root: no
+Homepage: https://github.com/schermaiolo/ofumo
+
+Package: ofumo
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: tiny Fumo desktop pet inspired by oneko
+ OFumo is a lightweight desktop pet for Linux based on the movement
+ behaviour of the classic oneko program.
+ .
+ It follows the pointer, provides idle and character animations, and supports
+ both X11 and KDE Plasma Wayland through an additional KWin bridge.
